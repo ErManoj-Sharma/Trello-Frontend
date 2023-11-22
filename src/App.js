@@ -1,26 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Routes from "./Routes";
+import NavBar from "./Components/NavBar";
+import SideBar from "./Components/SideBar";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div  style={{ margin: "0px" }}>
+      <div style={{ position: "fixed", top: "0px", left: "0px" , zIndex:"1"}}>
+        <NavBar />
+      </div>
+      <div style={{ marginTop: "60px", display: "flex" }}>
+        <div
+          class="sidebar"
+          style={{ width: "200px", position: "fixed", overflow: "hidden" }}
         >
-          Learn React
-        </a>
-        <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-      </header>
+          <div>
+            <SideBar />
+          </div>
+        </div>
+        <div
+          class="content"
+          style={{
+            position: "fixed",
+            top: "60px",
+            left: "200px",
+            width: "100%",
+            height: "calc(100vh - 60px)",
+            overflowY: "auto",
+            overflowX: "auto",
+            whiteSpace: "nowrap",
+          }}
+        >
+          <div style={{ width: "2000px" , height:"100%"}}>{Routes}</div>
+        </div>
+      </div>
     </div>
   );
 }
