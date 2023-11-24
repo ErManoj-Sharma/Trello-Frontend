@@ -42,13 +42,13 @@ function Home() {
         { noteName: "Task3", priority: "3", noteText: "abcd3" },
       ],
     },
-      ]);
+  ]);
   return (
-      <div style={{ display:"flex", whiteSpace: 'nowrap'}}>
-        {list.map((list) => (
-          <List listName={list.listName} listNotes={list.listNotes} />
-        ))}
-      </div>
+    <div style={{ display: "flex", whiteSpace: "nowrap" }}>
+      {list.map((list, index) => (
+        <List listName={list.listName} listNotes={list.listNotes} key={index} />
+      ))}
+    </div>
   );
 }
 

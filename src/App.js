@@ -10,15 +10,18 @@ function App() {
       </div>
       <div style={{ marginTop: "60px", display: "flex" }}>
         <div
-          class="sidebar"
-          style={{ width: "200px", position: "fixed", overflow: "hidden" }}
+          style={{
+            width: "200px",
+            position: "fixed",
+            overflow: "hidden",
+            top: "56px",
+          }}
         >
           <div>
             <SideBar />
           </div>
         </div>
         <div
-          class="content"
           style={{
             position: "fixed",
             top: "60px",

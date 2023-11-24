@@ -1,12 +1,12 @@
 import React from "react";
 
-export default function BoardList({ boardName, url, key }) {
+export default function BoardList({ boardName, url }) {
   return (
     <>
-      <li key={key}>
+      <li>
         <a
           href={url}
-          class="link-body-emphasis d-inline-flex text-decoration-none rounded"
+          className="link-body-emphasis d-inline-flex text-decoration-none rounded"
         >
           {boardName}
         </a>

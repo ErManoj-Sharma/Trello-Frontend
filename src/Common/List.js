@@ -1,5 +1,7 @@
 import React from "react";
+import Card from "./Card";
 function List({ listName, listNotes }) {
+  debugger;
   return (
     <div
       style={{
@@ -11,13 +13,35 @@ function List({ listName, listNotes }) {
         overflowX: "hidden",
         marginLeft: "10px",
         flexShrink: 0,
-        marginRight: "10px",
+        padding: "5px",
+        backgroundColor: "#101205",
+        color: "#949fa6",
+        // FireFox
+        scrollbarWidth: 0,
+        scrollbarColor: "transparent transparent",
+        borderRadius: "5px",
       }}
     >
-      <div class="card-body" style={{ flexWrap: "wrap" }}>
-        <h5 class="card-title">{listName}</h5>
-        <div>Content 1</div>
+      {/* TODO: Fix Scroll Color Issue */}
+      <style>
+        {`
+      /* WebKit */
+      ::-webkit-scrollbar {
+        width:0;
+        background: #777;      }
 
+    `}
+      </style>
+      <div className="card-body" style={{ flexWrap: "wrap" }}>
+        <h5 className="card-title">{listName}</h5>
+        {listNotes.map((list, index) => (
+          <Card
+            noteName={list.noteName}
+            priority={list.priority}
+            noteText={list.noteText}
+            key={index}
+          />
+        ))}
       </div>
     </div>
   );
