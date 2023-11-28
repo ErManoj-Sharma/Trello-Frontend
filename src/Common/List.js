@@ -1,10 +1,13 @@
 import React from "react";
 import Card from "./Card";
+import AddCard from "./AddCard";
 function List({ listName, listNotes }) {
-  debugger;
   return (
     <div
       style={{
+        height: "auto",
+        display: "inline-block",
+        verticalAlign: "top",
         border: "1px solid black",
         width: "300px",
         maxWidth: "300px",
@@ -40,8 +43,10 @@ function List({ listName, listNotes }) {
             priority={list.priority}
             noteText={list.noteText}
             key={index}
+            id={index}
           />
         ))}
+        <AddCard />
       </div>
     </div>
   );

@@ -69,6 +69,30 @@ function NavBar() {
                   Create
                 </button>
               </li>
+              &nbsp;
+              <li className="nav-item">
+                  <button type="button" className="btn btn-primary" onClick={() => window.location.href='/signin'}>
+                    SignIn
+                  </button>
+              </li>
+              &nbsp;
+              <li className="nav-item">
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  href="/signup"
+                  onClick={() => window.location.href='/signup'}
+                >
+                  SignUp
+                </button>
+              </li>
+              &nbsp;
+              <li className="nav-item">
+                <button type="button" className="btn btn-primary">
+                  SignOut
+                </button>
+              </li>
+              &nbsp;
             </ul>
             <form className="d-flex" role="search">
               <input

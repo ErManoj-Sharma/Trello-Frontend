@@ -15,7 +15,7 @@ function Home() {
       listNotes: [
         { noteName: "Task1", priority: "1", noteText: "abcd1" },
         { noteName: "Task2", priority: "2", noteText: "abcd2" },
-        { noteName: "Task3", priority: "3", noteText: "abcd3" },
+{ noteName: "Task3", priority: "3", noteText: "abcd3" },
       ],
     },
     {
@@ -31,7 +31,7 @@ function Home() {
       listNotes: [
         { noteName: "Task1", priority: "1", noteText: "abcd1" },
         { noteName: "Task2", priority: "2", noteText: "abcd2" },
-        { noteName: "Task3", priority: "3", noteText: "abcd3" },
+{ noteName: "Task3", priority: "3", noteText: "abcd3" },
       ],
     },
     {
@@ -44,9 +44,9 @@ function Home() {
     },
   ]);
   return (
-    <div style={{ display: "flex", whiteSpace: "nowrap" }}>
+    <div>
       {list.map((list, index) => (
-        <List listName={list.listName} listNotes={list.listNotes} key={index} />
+          <List listName={list.listName} listNotes={list.listNotes} key={index} />
       ))}
     </div>
   );
